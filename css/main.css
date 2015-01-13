@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+  background-color: black;
+}
+
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+
+.clock-face {
+   background-image: url("../images/clock-face.svg");
+   height: 300px;
+   width: 300px;
+   position: relative;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.hand-hour {
+   width: 14px;
+   position: absolute;
+   bottom: 50%;
+   left: calc(50% - 7px);
+   transition: 6000ms;
+   transform-origin: center bottom;
+}
+
+.hand-minute {
+    width: 14px;
+    position: absolute;
+    bottom: 50%;
+    left: calc(50% - 7px);
+    transition: 6000ms;
+    transform-origin: center bottom;
+  
+}
+
+.center {
+    width: 28px;
+    position: absolute;
+    left: calc(50% - 14px);
+    bottom: calc(50% - 14px);
+    
+}
+
+
+.clock-face:target .hand-hour {
+    transform: rotate(360deg);
+}
+
+
+.clock-face:target .hand-minute {
+    transform: rotate(4320deg);
+}
+
+.main {
+    text-align: center;
+}
+
+.btn-forwards {
+    margin: 1.75em;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 6em;
+    width: 6em;
+    display: inline-block;
+    transition: all .5s linear;
+    text-decoration: none;
+    background-color: green;
+    color: #fff;
+    font-family: arial, sans-serif;
+}
+
+.btn-backwards {
+    margin: 1.75em;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 6em;
+    width: 6em;
+    display: inline-block;
+    transition: all .5s linear;
+    text-decoration: none;
+    background-color: red;  
+    color: #fff;
+    font-family: arial, sans-serif;
+}
+
+.btn-forwards:hover {
+    opacity: 1;
+    background-color: #fff;
+    color: black;
+}
+
+.btn-backwards:hover {
+    opacity: 1;
+    background-color: #fff;
+    color: black;
+}
+    
+
+
